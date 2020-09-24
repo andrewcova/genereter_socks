@@ -36,7 +36,14 @@
     color: white;
     transform: translateY(-7px);
   }
-
+  
+  .homebtns {
+    background-image: url('/image/18798909.png');
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
 .socksConst {
 border: 2px solid green;
@@ -58,4 +65,9 @@ margin-left: 0px;
 }
 .socksStyle {
  height: 1000px;
+}
+
+#homepic {
+  width: 1700px;
+  height: 500px;
 }
