@@ -1,0 +1,6 @@
+.backgroundimg {
+  background-image:url('/image/socks.jpg');
+  /* background-size: cover; */
+  background-size: 100%;
+  height: 1700px;
+} 
