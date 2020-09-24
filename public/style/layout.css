@@ -1,8 +1,71 @@
 body {
-  background-image: url('/image/socks.jpg');
+  margin: 0;
+  background-image: url('/image/background54.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   /* background-size: cover; */
-  background-size: 100%;
-  height: 1700px;
+}
+
+header {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid darkgray ;
+  background-image: url('/image/background54.png');
+  position: relative;
+  background-color:white; 
+  height: 70px;
+}
+form {
+  position: relative;
+  width: 300px;
+  height: 10px;
+  margin: 0 auto;
+}
+
+.d6 {
+  background: rgb(200, 197, 197);
+  margin-top: 15px;
+
+}
+.d6 form {
+  height: 42px;
+}
+.d6 input {
+  height: 100%;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: .4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.d6 input:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 2px solid #F9F0DA;
+}
+.d6 button {
+  background:  rgba(30,255,188,1);
+  border: none;
+  height: 42px;
+  width: 42px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.d6 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #F9F0DA;
 }
 
 #navigation {
@@ -20,4 +83,33 @@ body {
 
 a {
   font-size: 30px;
+  text-decoration: none;
+}
+
+.loginbutton{
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30,255,188,1);
+  background: rgba(255,255,255,1);
+  transition: color .3s, background .5s;
+}
+.loginbutton:hover {
+  animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30,255,188,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 50%, rgba(30,255,188,1) 50%,      rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(255,255,255,1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
+@keyframes stripes {
+  0% {background-position: 0 0;}
+  100% {background-position: 50px 0;}
 }

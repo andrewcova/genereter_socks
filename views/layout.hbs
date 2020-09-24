@@ -9,11 +9,40 @@
     <div>
     <nav id="navigation">
     <div id="logo"><a href="">logo</a></div>
-    <div id="search"><a href="">search</a></div>
-   <div class="contacts"><a href="">+12434554455</a></div>
-   <div id="liked"><a href="">\0059</a></div>
-   <div id="basket"><a href="">Корзина</a></div>
-   <div id="login"><a href="">Войти</a></div>
+    <div class="d6">
+      <form action="/catalog" method="post">
+        <input name="search" placeholder="Search" type="search">
+        <button type="submit"></button>
+      </form>
+    </div>
+   <div>
+   <form method="post" action="/about">
+   <button class="loginbutton">
+     Контакты
+   </button>
+   </form>
+   </div>
+   <div>
+   <form method="post" action="/liked">
+   <button class="loginbutton">
+     Избранное
+   </button>
+   </form>
+   </div>
+    <div>
+   <form method="post" action="/basket">
+   <button class="loginbutton">
+     Корзина
+   </button>
+   </form>
+   </div>
+   <div>
+   <form method="post" action="/profile">
+   <button class="loginbutton">
+     Войти
+   </button>
+   </form>
+   </div>
    </nav>
    </div>
   </header>
