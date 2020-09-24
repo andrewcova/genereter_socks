@@ -52,7 +52,7 @@ form {
   border-bottom: 2px solid #F9F0DA;
 }
 .d6 button {
-  background:  rgba(30,255,188,1);
+  background: black;
   border: none;
   height: 42px;
   width: 42px;
@@ -99,7 +99,7 @@ a {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 2px;
-  color: rgba(30,255,188,1);
+  color:;
   background: rgba(255,255,255,1);
   transition: color .3s, background .5s;
 }

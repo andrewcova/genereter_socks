@@ -2,17 +2,17 @@
 <div id="constcat">
   <div class="pricebtn">
     <select>size</select>
-    <button class="button25">Заказать</button>
+    <button class="button25">Создать</button>
   </div>
-  <div id="constpic">
-  <img src="/image/shablon.jpg">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"
+  <div class="socksConst">
+    <div class="socks">
+      <img class="sockPic" src="/image/ezgif.com-crop (1).png">
+    </div>
+    <div class="socksStyle">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"
   integrity="sha512-T9uV3LxV54oKVYSwORGeHdJ1Ti0WcQvDjAaTvMS6+qfrI5ZRzwxfXVzr7fqodTjfZ6wtbreT5A+65ykwbp4DOw=="
   crossorigin="anonymous"></script>
 <canvas id="c" width="700" height="1000"></canvas>
-<svg top="500px" height="100" width="100">
-  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="none" />
-</svg>
 <script>
   const canvas = new fabric.Canvas('c');
   fabric.Image.fromURL('https://souvenirs-nn.ru/wp-content/uploads/2019/06/khokhloma-e1481297441689.png',
@@ -25,13 +25,11 @@
       canvas.add(img).setActiveObject(img);
     });
 </script>
-
-  </img>
-  </div>
-  <div>
-    Изменить цвет, картинку
-    <div>
-    <button class="button25">В корзину</button>
     </div>
   </div>
+<div>
+  <div>
+    <button class="button25">В корзину</button>
   </div>
+</div>
+</div>
