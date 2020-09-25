@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
+const {db, userSchema, imgStyleSchema, sockUserSchema} = require('./models/schemaAll')
 
 app.set('view engine', 'hbs');
 
@@ -12,37 +14,33 @@ app.get('/', (req, res) => {
 res.render('home')
 })
 
-app.get('/catalog', (req, res) => {
-  res.render('catalog')
-})
+// app.get('/catalog', (req, res) => {
+//   res.render('catalog')
+// })
 
-app.get('/constructor', (req, res) => {
+
+app.post('/constructor', (req, res) => {
   res.render('constructor')
 })
 
-app.post('/constructor', (req, res) => {
-  res.send()
-})
 
-app.get('/basket', (req, res) => {
-  res.render('basket')
-})
-
-app.post('/basket', (req, res) => {
-  res.redirect('/basket')
-})
-
-app.get('/liked', (req, res) => {
-  res.render('liked')
-})
 
 app.post('/liked', (req, res) => {
-  res.redirect('/liked')
+  res.render('/liked')
 })
 
-app.post('/catalog', (req, res) => {
-  res.redirect('/catalog')
+
+
+app.post('/constructor2', (req, res) => {
+  let emojiSelector = ['😀', '😃',  '😄', '👾', '💀', '👹', '👻', '👽', '👿', '💩', '🤡', '🤺', '🧛', '🧟', '🎃', 
+  '💅', '🤳', '💪', '🦾', '🦵', '🦿', '🦶', '👂', '🦻', '👃', '🧠', '🦷', '🦴', '👀', '👁', '👅', '👄', '💋', '🩸',
+  '🏇🏾', '🏂🏾', '🏌🏾', '🏌🏾‍♂️', '🏌🏾‍♀️', '🏄🏾', '🏄🏾‍♂️', '🏄🏾‍♀️', '🚣🏾', '🚣🏾‍♂️', '🚣🏾‍♀️', '🏊🏾', '🏊🏾‍♂️', '🏊🏾‍♀️', '⛹🏾', '⛹🏾‍♂️', '⛹🏾‍♀️', '🏋🏾', '🏋🏾‍♂️', '🏋🏾‍♀️', '🚴🏾', '🚴🏾‍♂️', '🚴🏾‍♀️', '🚵🏾', '🚵🏾‍♂️', '🚵🏾‍♀️', '🤸🏾', '🤸🏾‍♂️', '🤸🏾‍♀️', '🤽🏾', '🤽🏾‍♂️', '🤽🏾‍♀️', '🤾🏾'];
+  let backgroundsSelector = ['🟥 red', '🟧 orange', '🟨 yellow', '🟩 green', '🟦 blue', '🟪 purple', '⬛️ black', '⬜️ white'];
+  console.log(backgroundsSelector);
+  console.log(emojiSelector)
+  res.render('constructor2', {emojiSelector, backgroundsSelector});
 })
+
 
 app.listen(3000);
 

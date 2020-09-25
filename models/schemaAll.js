@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const model = mongoose.model;
 
-mongoose.connect('mongodb://localhost:27017/weeek_4',
+const db = mongoose.connect('mongodb://localhost:27017/weeek_4',
   { useNewUrlParser: true, useUnifiedTopology: true });
 
   const userSchema = Schema({
@@ -22,3 +22,5 @@ mongoose.connect('mongodb://localhost:27017/weeek_4',
     },
     path: String,
   });
+
+  module.exports = {db, userSchema, imgStyleSchema, sockUserSchema};

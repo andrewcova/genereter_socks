@@ -1,12 +1,11 @@
 #constcat 
-{ border: 2px solid red;
+{ border: 2px solid white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
 #constpic {
-  border: 2px solid red;
 }
 
 .button25 {
@@ -46,7 +45,8 @@
   }
 
 .socksConst {
-border: 2px solid green;
+border-right: 1px solid white;
+border-left: 1px solid white;
 width: 1000px;
 margin-left: 0px;
 }
@@ -60,7 +60,7 @@ margin-left: 0px;
   width: 600px;
   height: 400px;
   margin-top: 150px;
-  border: 2px solid red;
+  border: 1px solid gray;
   margin-left: 100px;
 }
 .socksStyle {
