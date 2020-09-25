@@ -5,31 +5,48 @@
     <button class="button25">Создать</button>
   </div>
   <div class="socksConst">
-    <div class="socks">
+    <div class="socks" id="pick">
       <img class="sockPic" src="/image/ezgif.com-crop (1).png">
     </div>
+    <div id="resultvas"></div>
     <div class="socksStyle">
+      <button onclick="take()">GHBdtm</button>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"
-  integrity="sha512-T9uV3LxV54oKVYSwORGeHdJ1Ti0WcQvDjAaTvMS6+qfrI5ZRzwxfXVzr7fqodTjfZ6wtbreT5A+65ykwbp4DOw=="
-  crossorigin="anonymous"></script>
-<canvas id="c" width="700" height="1000"></canvas>
-<script>
-  const canvas = new fabric.Canvas('c');
-  fabric.Image.fromURL('https://souvenirs-nn.ru/wp-content/uploads/2019/06/khokhloma-e1481297441689.png',
-    function (img) {
-      img.scale(0.5).set({
-        left: 150,
-        top: 150,
-        angle: -15
-      });
-      canvas.add(img).setActiveObject(img);
-    });
-</script>
+        integrity="sha512-T9uV3LxV54oKVYSwORGeHdJ1Ti0WcQvDjAaTvMS6+qfrI5ZRzwxfXVzr7fqodTjfZ6wtbreT5A+65ykwbp4DOw=="
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>">
+      <canvas id="c" width="700" height="1000"></canvas>
+      <script>
+        const canvas = new fabric.Canvas('c');
+        fabric.Image.fromURL('https://souvenirs-nn.ru/wp-content/uploads/2019/06/khokhloma-e1481297441689.png',
+          function (img) {
+            console.log("2")
+            img.scale(0.5).set({
+              left: 150,
+              top: 150,
+              angle: -15
+            });
+            canvas.add(img).setActiveObject(img);
+          });
+        window.take = function () {
+          console.log("1")
+          html2canvas(document.getElementById("constcat"), {
+            letterRendering: 1,
+            allowTaint: true,
+            onrendered: function (canvas) {
+              let result = canvas.toDataURL()
+              const win = window.open();
+              win.document.write('<iframe src="' + result + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>')
+
+            }
+          })
+        }
+      </script>
     </div>
   </div>
-<div>
   <div>
-    <button class="button25">В корзину</button>
+    <div>
+      <button class="button25">В корзину</button>
+    </div>
   </div>
-</div>
 </div>
