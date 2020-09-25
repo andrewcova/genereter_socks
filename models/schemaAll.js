@@ -15,12 +15,11 @@ const db = mongoose.connect('mongodb://localhost:27017/weeek_4',
     path: String,
   });
 
-  const sockUserSchema = Schema({
-    user_id:  {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-    },
-    path: String,
+  const sockSchema = Schema({
+  color: String,
+  emojin: String,
   });
 
-  module.exports = {db, userSchema, imgStyleSchema, sockUserSchema};
+  const Sock = mongoose.model('Sock', sockSchema);
+
+  module.exports = {db, Sock};

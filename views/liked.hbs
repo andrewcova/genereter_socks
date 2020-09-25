@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/style/constructor2.css">
 <div>
   <form method="post" action="">
   <table>
@@ -14,3 +15,22 @@
   </table>
   </form>
 </div>
+<div class="socksConst">
+      {{#each}}
+    <div class="socks">
+      <img class="sockPic" src="/image/ezgif.com-crop (1).png">
+    </div>
+    <div class="socksStyle" id="socksStyle">
+      <div id="layer2">
+    <div class="layer3">
+      <pre>
+    <p class="firstSock" id="firstSock">{{this.emojin}}</p></pre>
+      </div>
+       <div class="backgrounds" id="backgrounds">
+         {{#each backgroundsSelector}}
+      <div class="backgroundsSelector">{{this}}</div>
+      {{/each}}
+    </div>
+    {{/each}}
+    </div>
+  </div>

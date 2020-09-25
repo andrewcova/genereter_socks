@@ -3,8 +3,10 @@
 <script defer src="/clientJs/clientJs.js"></script>
 <div id="constcat">
   <div class="pricebtn">
-        <button class="button25">Создать</button>
-        <button class="button25">Избранное</button>
+        <form method="get" action="/liked">
+        <button id="crealeSock" class="button25">Создать</button>
+        </form>
+        {{!-- <button class="button25">Избранное</button> --}}
     <select>
         <option value="" disabled selected hidden>Выберите размер</option>
       <option>{{size}}</option>
