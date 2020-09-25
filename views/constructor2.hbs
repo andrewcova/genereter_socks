@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/style/constructor2.css">
+<meta charset="UTF-8">
+<script defer src="/clientJs/clientJs.js"></script>
+<div id="constcat">
+  <div class="pricebtn">
+        <button class="button25">Создать</button>
+        <button class="button25">Избранное</button>
+    <select>
+        <option value="" disabled selected hidden>Выберите размер</option>
+      <option>{{size}}</option>
+     </select>
+      <select>
+            <option value="" disabled selected hidden>Выберите количество</option>
+      <option>{{count}}</option>
+     </select>
+    <div class="emojis" id="emojis">
+      {{#each emojiSelector}}
+      <div class="emojiSelector">{{this}}</div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="socksConst">
+    <div class="socks">
+      <img class="sockPic" src="/image/ezgif.com-crop (1).png">
+    </div>
+    <div class="socksStyle" id="socksStyle">
+      <div id="layer2">
+    <div class="layer3">
+      <pre>
+    <p class="firstSock" id="firstSock">😀{{emoji}}    {{emoji}}😀</p></pre>
+      </div>
+       <div class="backgrounds" id="backgrounds">
+      {{#each backgroundsSelector}}
+      <div class="backgroundsSelector">{{this}}</div>
+      {{/each}}
+    </div>
+    </div>
+  </div>
+<div>
+</div>
+</div>
